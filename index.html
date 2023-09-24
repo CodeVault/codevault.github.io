@@ -1,21 +1,72 @@
-<html>
-  <head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Page | CodeVault</title>
-  </head>
-  <body>
-    <h1>Bookmarks</h1>
-    
+</head>
+<body>
 
-
+    <div id="main">
+        <div>
+            <a href="https://hackerone.com/hacktivity/overview" class="b_mark">Hacktivity</a>
+            <a href="https://medium.com/" class="b_mark">Medium</a>
+        </div>
+    </div>
+    <div id="dmode_btn">b/w</div>
     <style>
-      body{
-        margin : 0;
-        padding : 0;
-        font-family : Helvetica;
-        background-color : #101010;
-        color : white;
-        font-size : 1em;
-          }
+        body{
+            margin: 0;
+            padding: 0;
+            font-family: Helvetica, sans-serif;
+            background-color: black;
+            color: rgb(227, 227, 227);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #main{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-direction: column;
+            height: 80vh;
+        }
+
+        a{
+            padding: 5px;
+            margin: 8px;
+            font-size: 1.5em !important;
+            color: rgb(228, 228, 228) !important;
+            border: 2px solid rgb(227, 227, 227);
+            border-radius: .4em;
+            text-decoration: none;
+            display: block;
+            text-align: center;
+        }
+
+        #dmode_btn{
+            position: fixed;
+            bottom: 15px;
+            margin: 5px;
+            border: 1px solid gray;
+            padding: 5px;
+        }
+
+        .dark-mode{
+            background-color: #101010;
+            color: rgb(227, 227, 227);
+        }
     </style>
-  </body>
+
+    <script>
+        document.getElementById("dmode_btn").addEventListener("click",()=>{
+            var element = document.body;
+            element.classList.toggle("dark-mode");
+        })
+    </script>
+    
+</body>
 </html>

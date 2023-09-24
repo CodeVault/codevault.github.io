@@ -9,22 +9,35 @@
 <body>
 
     <div id="main">
-        <div>
+        <div id="links">
             <a href="https://hackerone.com/hacktivity/overview" class="b_mark">Hacktivity</a>
+            <a href="https://bugcrowd.com/crowdstream" class="b_mark">Crowdstream</a>
             <a href="https://medium.com/" class="b_mark">Medium</a>
+            <a href="https://portswigger.net/research" class="b_mark">Portswigger Research</a>
+            
+            
+           
         </div>
     </div>
-    <div id="dmode_btn">b/w</div>
+    <div id="panel">
+        <!-- <div id="top_btn">top</div> -->
+        <div id="dmode_btn">b/w</div>
+    </div>
     <style>
+        *{
+        /* border: 2px solid red; */
+        }
         body{
-            margin: 0;
-            padding: 0;
+            /* Temp Cod5  */ 
+            margin: 150px 0; 
+            padding: 10px;
             font-family: Helvetica, sans-serif;
             background-color: black;
             color: rgb(227, 227, 227);
             display: flex;
             align-items: center;
             justify-content: center;
+            /* height: 100vh; */
         }
 
         #main{
@@ -32,7 +45,13 @@
             align-items: center;
             justify-content: space-around;
             flex-direction: column;
-            height: 80vh;
+            /* overflow: scroll; */
+            /* height: 100vh; */
+            margin: 10px 10px;
+        }
+
+        #links{
+            /* overflow: scroll; */
         }
 
         a{
@@ -47,12 +66,26 @@
             text-align: center;
         }
 
-        #dmode_btn{
+        #panel{
             position: fixed;
-            bottom: 15px;
+            bottom: 0;
+            height: 1.5em;
             margin: 5px;
-            border: 1px solid gray;
+            border-top: 1px solid rgb(95, 95, 95);
             padding: 5px;
+            background-color:rgb(0,0,0,0.1);
+            backdrop-filter: blur(10px);
+            width: 100vw;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            box-shadow: 2px 3px 10px 2px #000;
+        }
+
+        #dmode_btn{
+            background-color: black;
+            width: 30px;
         }
 
         .dark-mode{
@@ -66,6 +99,11 @@
             var element = document.body;
             element.classList.toggle("dark-mode");
         })
+        document.getElementById("top_btn").addEventListener("click",()=>{
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;            
+        }
+        )
     </script>
     
 </body>

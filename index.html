@@ -126,10 +126,17 @@
             var element = document.body;
             element.classList.toggle("dark-mode");
         })
+        document.querySelectorAll('.link_wrap').forEach(link =>{ 
+            link.addEventListener('click',(e)=>{
+            window.location = e.target.firstChild.href;
+        });
+    });
+        /*
         document.getElementById("top_btn").addEventListener("click",()=>{
             document.body.scrollTop = 0;
             document.documentElement.scrollTop = 0;            
-        }
+        }*/
+                                                            
         )
     </script>
     

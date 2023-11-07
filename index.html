@@ -124,7 +124,7 @@ height:100vh;
             justify-content: space-around;
             align-items: center;
             box-shadow: 2px 3px 10px 2px #000;
-            display:hidden;
+           
         }
 
         #dmode_btn{
@@ -160,7 +160,8 @@ height:100vh;
 
     <script>
         
-        element.classList.toggle("dark-mode");
+       var element = document.body;
+       element.classList.toggle("dark-mode");
         
         document.getElementById("dmode_btn").addEventListener("click",()=>{
             var element = document.body;

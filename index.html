@@ -29,9 +29,9 @@
         </div>
     </div>
     <div id="panel">
-        <!-- <div id="top_btn">top</div> -->
+        <!-- <div id="top_btn">top</div> <div id="oled_mode_btn">o/l</div>-->
         <div id="dmode_btn">b/w</div>
-        <div id="oled_mode_btn">o/l</div>
+        
         <div id="version">OCT01_1120</div>
     </div>
     <style>
@@ -156,6 +156,9 @@ height:100vh;
     </style>
 
     <script>
+        
+        element.classList.toggle("dark-mode");
+        
         document.getElementById("dmode_btn").addEventListener("click",()=>{
             var element = document.body;
             element.classList.toggle("dark-mode");

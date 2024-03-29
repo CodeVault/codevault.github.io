@@ -1,0 +1,183 @@
+html {
+    touch-action: manipulation;
+    height: 100%;
+}
+
+body {
+    overflow-wrap: break-word;
+    font-size: 1.1em;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: auto;
+    margin-left: auto;
+    font-family: "Roboto Mono", monospace;
+
+}
+/*
+@media (min-width: 576px) {
+    body {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    body {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    body {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    body {
+        max-width: 1140px;
+    }
+}
+
+*/
+
+#main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex-flow: row wrap;
+}
+#left-div{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+#right-div{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+#progress_bar,#progress_bar_day {
+    border-radius: 8px;
+    width: calc(100% - 8px);
+    height: 40px;
+    background-color: #e3e3ef;
+    max-width: 600px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#progress_bar_message,#progress_bar_day_message {
+    font-size: 1.2em;
+    font-weight: bolder;
+}
+
+#progress-div {
+    /* position: absolute; */
+    /* top: 50%; */
+    /* left: 50%; */
+    /* transform: translate(-50%,-50%); */
+    text-align: center;
+    width: 80%;
+    height: 30%;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#fs-btn{
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 1.2em;
+    height: 1.2em;
+    /* background-color: rgb(192, 12, 12); */
+    /* margin: 1em; */
+    /* border: 2px white; */
+    /* border-top-left-radius: 10%; */
+    /* border-top-right-radius: 10%; */
+    /* border-top-right-radius: 2px rgb(238, 238, 238); */
+    /* border-radius: 10px; */
+    filter: brightness(15%);
+    --s: 10px; /* the size on the corner */
+    --t: 4px;  /* the thickness of the border */
+    --g: 2px; /* the gap between the border and image */
+  
+    padding: calc(var(--g) + var(--t));
+    outline: var(--t) solid #ffffff; /* the color here */
+    outline-offset: calc(-1*var(--t));
+    /* outline-offset: -1px;  */
+    mask: conic-gradient(at var(--s) var(--s),#0000 75%,#000 0)
+    0 0/calc(100% - var(--s)) calc(100% - var(--s)),
+    linear-gradient(#000 0 0) content-box;
+    transition: .4s;
+}
+
+#fs-btn:hover{
+    filter: brightness(100%);
+    outline-offset: calc(var(--g)/-1)
+    /* outline-offset: -1px; */
+}
+
+
+/* links */
+
+#links{
+            /* overflow: scroll; */
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .link_wrap{
+            padding: 8px;
+            margin: 8px;
+            font-size: 1.2em !important;
+            /* border: 2px solid rgb(227, 227, 227); */
+            /* box-shadow: 4px 4px 5px rgb(167, 167, 167); */
+            border-radius: .8em;
+            display: flex;
+            /* text-align: center; */
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            min-width: 4em !important;
+            min-height: 4em !important;
+
+
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(17, 25, 40, 0.75);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+        }
+
+        a{
+            text-decoration: none;
+            color: rgb(228, 228, 228) !important;
+            display: inline;
+            padding: auto;
+            margin: auto;
+        }

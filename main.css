@@ -131,7 +131,7 @@ body {
             /* overflow: scroll; */
             display: flex;
             flex-flow: row wrap;
-            justify-content: center;
+            justify-content: start;
             align-items: center;
             text-align: center;
 }
@@ -144,7 +144,7 @@ body {
             /* box-shadow: 4px 4px 5px rgb(167, 167, 167); */
             border-radius: .8em;
             display: flex;
-            /* text-align: center; */
+            
             justify-content: center;
             text-align: center;
             position: relative;

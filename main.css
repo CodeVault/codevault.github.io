@@ -55,6 +55,7 @@ body {
     align-items: center;
     height: 100%;
     flex-flow: row wrap;
+    margin: 2em;
 }
 
 

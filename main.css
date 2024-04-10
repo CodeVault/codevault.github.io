@@ -1,166 +1,274 @@
 html {
-    touch-action: manipulation;
-    height: 100%;
+touch-action: manipulation;
+height: 100vh;
+margin: 0;
 }
 
 body {
-    overflow-wrap: break-word;
-    font-size: 1em;
-    color: rgb(255, 255, 255);
-    background-color: rgb(0, 0, 0);
-    box-sizing: border-box;
-    width: 100%;
-    height: 100%;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-top: 0;
-    margin-bottom: 0;
-    margin-right: auto;
-    margin-left: auto;
-    font-family: "Roboto Mono", monospace;
+/* overflow-wrap: break-word; */
+font-size: 1em;
+color: rgb(255, 255, 255);
+background-color: rgb(0, 0, 0);
+box-sizing: border-box;
+width: 100vw;
+height: 100vh;
+font-family: "Roboto Mono", monospace;
+
+margin: 0;
+padding: 0;
+
 
 }
+
+#dev-banner{
+height: 5vh !important;
+background-color: rgb(249, 6, 6);
+color: rgb(255, 255, 255);
+width: 100%;
+margin: 0;
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+font-size: 1.2em;
+font-weight: bold;
+}
+
+
 /*
+
 @media (min-width: 576px) {
-    body {
-        max-width: 540px;
-    }
+body {
+max-width: 540px;
+}
 }
 
 @media (min-width: 768px) {
-    body {
-        max-width: 720px;
-    }
+body {
+max-width: 720px;
+}
 }
 
 @media (min-width: 992px) {
-    body {
-        max-width: 960px;
-    }
+body {
+max-width: 960px;
+}
 }
 
 @media (min-width: 1200px) {
-    body {
-        max-width: 1140px;
-    }
+body {
+max-width: 1140px;
+}
 }
 
 */
 
 #main{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    flex-flow: row wrap;
-    margin: 2em;
+display: flex;
+justify-content: center;
+align-items: center;
+/* height: 100%; */
+flex-direction: column;
+/* flex-flow: column nowrap; */
+margin: 0;
+/* overflow: scroll; */
+
+/* border: 2px solid green; */
 }
 
 
-#progress_bar,#progress_bar_day {
-    border-radius: 8px;
-    width: calc(100% - 8px);
-    height: 40px;
-    background-color: #e3e3ef;
-    max-width: 600px;
-    margin: auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
+#progress_bar, #progress_bar_day{
+border-radius: 8px;
+width: calc(100% - 8px);
+height: 40px;
+background-color: #e3e3ef;
+max-width: 600px;
+margin: auto;
+margin-top: 20px;
+margin-bottom: 20px;
 }
 
 #progress_bar_message,#progress_bar_day_message {
-    font-size: 1.2em;
-    font-weight: bolder;
+font-size: 1.2em;
+font-weight: bolder;
 }
 
 #progress-div {
-    /* position: absolute; */
-    /* top: 50%; */
-    /* left: 50%; */
-    /* transform: translate(-50%,-50%); */
-    text-align: center;
-    width: 80%;
-    height: 30%;
 
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
+/* transform: translate(-50%,-50%); */
+text-align: center;
+/* width: 30%; */
+height: 25%;
+
+display: flex;
+align-items: center;
+flex-direction: column;
+justify-content: center;
+
 }
 
 #fs-btn{
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-    width: 1.2em;
-    height: 1.2em;
-    /* background-color: rgb(192, 12, 12); */
-    /* margin: 1em; */
-    /* border: 2px white; */
-    /* border-top-left-radius: 10%; */
-    /* border-top-right-radius: 10%; */
-    /* border-top-right-radius: 2px rgb(238, 238, 238); */
-    /* border-radius: 10px; */
-    filter: brightness(15%);
-    --s: 10px; /* the size on the corner */
-    --t: 4px;  /* the thickness of the border */
-    --g: 2px; /* the gap between the border and image */
-  
-    padding: calc(var(--g) + var(--t));
-    outline: var(--t) solid #ffffff; /* the color here */
-    outline-offset: calc(-1*var(--t));
-    /* outline-offset: -1px;  */
-    mask: conic-gradient(at var(--s) var(--s),#0000 75%,#000 0)
-    0 0/calc(100% - var(--s)) calc(100% - var(--s)),
-    linear-gradient(#000 0 0) content-box;
-    transition: .4s;
+position: fixed;
+bottom: 10px;
+right: 10px;
+width: 1.2em;
+height: 1.2em;
+/* background-color: rgb(192, 12, 12); */
+/* margin: 1em; */
+/* border: 2px white; */
+/* border-top-left-radius: 10%; */
+/* border-top-right-radius: 10%; */
+/* border-top-right-radius: 2px rgb(238, 238, 238); */
+/* border-radius: 10px; */
+filter: brightness(15%);
+--s: 10px; /* the size on the corner */
+--t: 4px;  /* the thickness of the border */
+--g: 2px; /* the gap between the border and image */
+
+padding: calc(var(--g) + var(--t));
+outline: var(--t) solid #ffffff; /* the color here */
+outline-offset: calc(-1*var(--t));
+/* outline-offset: -1px;  */
+mask: conic-gradient(at var(--s) var(--s),#0000 75%,#000 0)
+0 0/calc(100% - var(--s)) calc(100% - var(--s)),
+linear-gradient(#000 0 0) content-box;
+transition: .4s;
 }
 
 #fs-btn:hover{
-    filter: brightness(100%);
-    outline-offset: calc(var(--g)/-1)
-    /* outline-offset: -1px; */
+filter: brightness(100%);
+outline-offset: calc(var(--g)/-1)
+/* outline-offset: -1px; */
 }
 
 
 /* links */
 
 #links{
-            /* overflow: scroll; */
-            display: flex;
-            flex-flow: row wrap;
-            justify-content: start;
-            align-items: center;
-            text-align: center;
+/* overflow: scroll; */
+display: flex;
+flex-flow: row wrap;
+justify-content: space-around;
+align-items: center;
+text-align: center;
+
+}
+
+.link-group{
+margin: 5px;
 }
 
 .link_wrap{
-            padding: 5px;
-            margin: 5px;
-            font-size: 1em !important;
-            /* border: 2px solid rgb(227, 227, 227); */
-            /* box-shadow: 4px 4px 5px rgb(167, 167, 167); */
-            border-radius: .8em;
-            display: flex;
-            
-            justify-content: center;
-            text-align: center;
-            position: relative;
-            /*min-width: 4em !important;
-            min-height: 4em !important;*/
-    backdrop-filter: blur(16px) saturate(180%);
-    -webkit-backdrop-filter: blur(16px) saturate(180%);
-    background-color: rgba(17, 25, 40, 0.75);
-    border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.125);
+padding: 5px;
+margin: 5px;
+font-size: 1em !important;
+/* border: 2px solid rgb(227, 227, 227); */
+/* box-shadow: 4px 4px 5px rgb(167, 167, 167); */
+border-radius: .8em;
+display: flex;
+justify-content: center;
+text-align: center;
+position: relative;
+/*min-width: 4em !important;
+min-height: 4em !important;*/
+backdrop-filter: blur(16px) saturate(180%);
+-webkit-backdrop-filter: blur(16px) saturate(180%);
+background-color: rgba(17, 25, 40, 0.75);
+border-radius: 12px;
+border: 1px solid rgba(255, 255, 255, 0.125);
 }
 
 a{
-            text-decoration: none;
-            color: rgb(228, 228, 228) !important;
-            display: inline;
-            padding: auto;
-            margin: auto;
+text-decoration: none;
+color: rgb(228, 228, 228) !important;
+display: inline;
+padding: auto;
+margin: auto;
+}
+
+#scrolltop-btn{
+    /* position: fixed; */
+    /* right: 10px; */
+    border: 2px solid gray;
+    margin: 2px;
+    padding: 5px;
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 40px; /* Plhe button at the bottom of the page */
+    right: 5px; /* Placace te the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: rgb(0, 0, 0); /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+}
+
+#scrolltop-btn:hover {
+background-color: #151515a7; /* Add a dark-grey background on hover */
+}
+
+.demo-link-group{
+    display: none;
+    visibility: hidden;
+}
+@media screen and (min-width: 400px) {
+    #links{
+        margin-top: 10vh;
+    }
+    #main{
+        margin-top: 10vh;
+    }
+}
+@media screen and (max-width: 400px) {
+    body {
+    background-color: rgb(0, 0, 0);
+    /* border: 2px solid white; */
+    margin: 5px;
+    height: 100% !important;
+    min-height: 100% !important;
+    }
+
+    #fs-btn{
+    display: none;
+    }
+
+    #progress-div{
+    background-color: rgb(0, 0, 0);
+    position: relative;
+    left: auto;
+    top: auto;
+    margin: 5px;
+    border: none;
+    width: 80%;
+    height: 190px;
+    }
+
+    .link-group{
+    margin: 5px !important;
+    }
+
+    .link-group::after{
+    content: "_______________";
+    width: 100vw;
+    padding: 2px;
+    color: rgb(37, 37, 37);
+    margin: 2px !important;
+    text-align: center;
+    }
+
+    #progress-div::after{
+    content: "_______________";
+    color: rgb(37, 37, 37);
+    margin: 2px !important;
+    text-align: center;
+    }
+
+    #progress_bar,#progress_bar_day{
+    height: 20px;
+    width: calc(100% - 18px);
+    }
 }

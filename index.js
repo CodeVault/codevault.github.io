@@ -1,4 +1,4 @@
-{
+
     // const progress_bar_background_color = '#e3e3ef';
     let progress_bar_background_color = 'white';
     let progress_bar_foreground_color = 'limegreen';
@@ -104,7 +104,7 @@ document.getElementById("fs-btn").addEventListener("click",()=>{toggleFullscreen
 // console.log(display_update());
 
 // ======= For Day % =======
-
+setInterval(()=>{
 let progress_bar_day = document.getElementById("progress_bar_day") 
 let progress_bar_day_msg = document.getElementById("progress_bar_day_message")
 
@@ -116,8 +116,8 @@ c_mins= new Date().getHours()*60 + new Date().getMinutes()
 t_percent = ((c_mins/t_mins)*100).toFixed(2)
 
 
-console.log("c_mins % : "+c_mins);
-console.log("t % : "+t_percent);
+// console.log("c_mins % : "+c_mins);
+// console.log("t % : "+t_percent);
 
 
 let progress_bar_background_color = 'white';
@@ -126,10 +126,7 @@ let progress_bar_foreground_color = 'limegreen';
 progress_bar_day.style.background = `linear-gradient(to right, ${progress_bar_foreground_color} 0%, ${progress_bar_foreground_color} ${t_percent}%, ${progress_bar_background_color} ${t_percent}%, ${progress_bar_background_color} 100%)`
 
 // progress_bar_day_msg.innerHTML=`${t_percent} percent day complete`;
-setInterval(()=>{
+
 progress_bar_day_msg.innerHTML=`${t_percent} percent day complete`;
 // console.log('Running..');
-},3000)
-
-
-
+},0)

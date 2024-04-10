@@ -1,4 +1,4 @@
-
+{
     // const progress_bar_background_color = '#e3e3ef';
     let progress_bar_background_color = 'white';
     let progress_bar_foreground_color = 'limegreen';
@@ -130,3 +130,6 @@ progress_bar_day.style.background = `linear-gradient(to right, ${progress_bar_fo
 progress_bar_day_msg.innerHTML=`${t_percent} percent day complete`;
 // console.log('Running..');
 },0)
+
+
+
